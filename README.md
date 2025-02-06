@@ -20,4 +20,9 @@ works just like unpatched ffmpeg, encode what you want, but keep the timestamps 
 ![image](https://github.com/user-attachments/assets/b8816336-37a8-439e-87a1-d904f2815d7c)
 
 * encode
-![image](https://github.com/user-attachments/assets/a975de6e-fb93-4ccf-8551-997fc651cdb2)
+![image](https://github.com/user-attachments/assets/6ad9657f-06fe-4359-a1e7-d236fffaa8ad)
+
+
+* new file
+![image](https://github.com/user-attachments/assets/8d7f317c-5e98-4e19-94eb-ad1bcf0461e1)
+
