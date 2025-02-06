@@ -1,5 +1,5 @@
 # FFmpegSCTE-35patch
-## Tired of having your SCTE-35 data turned into Bin Data by ffmpeg? This will fix it. 
+## Tired of having your SCTE-35 Streams (__0x86__) turned into bin data ( __0x06__) by ffmpeg? This will fix it. 
 Patch ffmpeg to let  SCTE-35 streams pass through as SCTE-35
 ## Applies to 
 ```sh
