@@ -26,3 +26,4 @@ works just like unpatched ffmpeg, encode what you want, but keep the timestamps 
 * new file
 ![image](https://github.com/user-attachments/assets/8d7f317c-5e98-4e19-94eb-ad1bcf0461e1)
 
+* Boom! Goes the Dynamite.
