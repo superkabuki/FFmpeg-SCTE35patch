@@ -1,7 +1,7 @@
-diff -ruN FFmpeg/libavformat/mpegts.c FFmpeg-mod/libavformat/mpegts.c
---- FFmpeg/libavformat/mpegts.c	2025-02-06 16:42:13.175660764 -0500
-+++ FFmpeg-mod/libavformat/mpegts.c	2025-02-06 17:27:09.291514426 -0500
-@@ -877,12 +877,14 @@
+diff -ruN FFmpeg/libavformat/mpegts.c FFmpeg2/libavformat/mpegts.c
+--- FFmpeg/libavformat/mpegts.c	2025-02-06 23:30:47.089792854 -0500
++++ FFmpeg2/libavformat/mpegts.c	2025-02-06 23:13:46.715885515 -0500
+@@ -877,6 +877,7 @@
      { MKTAG('I', 'D', '3', ' '), AVMEDIA_TYPE_DATA,  AV_CODEC_ID_TIMED_ID3 },
      { MKTAG('V', 'C', '-', '1'), AVMEDIA_TYPE_VIDEO, AV_CODEC_ID_VC1   },
      { MKTAG('O', 'p', 'u', 's'), AVMEDIA_TYPE_AUDIO, AV_CODEC_ID_OPUS  },
@@ -9,22 +9,15 @@ diff -ruN FFmpeg/libavformat/mpegts.c FFmpeg-mod/libavformat/mpegts.c
      { 0 },
  };
  
- static const StreamType METADATA_types[] = {
-     { MKTAG('K','L','V','A'), AVMEDIA_TYPE_DATA, AV_CODEC_ID_SMPTE_KLV },
-     { MKTAG('I','D','3',' '), AVMEDIA_TYPE_DATA, AV_CODEC_ID_TIMED_ID3 },
-+    { MKTAG('C', 'U', 'E', 'I'), AVMEDIA_TYPE_DATA,  AV_CODEC_ID_SCTE_35 },
-     { 0 },
- };
- 
-diff -ruN FFmpeg/libavformat/mpegtsenc.c FFmpeg-mod/libavformat/mpegtsenc.c
---- FFmpeg/libavformat/mpegtsenc.c	2025-02-06 16:42:13.175660764 -0500
-+++ FFmpeg-mod/libavformat/mpegtsenc.c	2025-02-06 17:13:18.657638447 -0500
+diff -ruN FFmpeg/libavformat/mpegtsenc.c FFmpeg2/libavformat/mpegtsenc.c
+--- FFmpeg/libavformat/mpegtsenc.c	2025-02-06 23:30:47.089792854 -0500
++++ FFmpeg2/libavformat/mpegtsenc.c	2025-02-06 23:18:36.934119780 -0500
 @@ -443,6 +443,11 @@
              stream_type = STREAM_TYPE_PRIVATE_DATA;
          }
          break;
 +    case AV_CODEC_ID_SCTE_35:
-+    		stream_type = 0x86;
++    		stream_type = STREAM_TYPE_SCTE_DATA_SCTE_35;
 +         st->codecpar->codec_type = AVMEDIA_TYPE_DATA;
 +        	st->codecpar->codec_id   = AV_CODEC_ID_SCTE_35;
 +    		break;
