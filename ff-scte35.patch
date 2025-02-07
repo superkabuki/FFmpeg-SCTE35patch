@@ -18,7 +18,7 @@ diff -ruN FFmpeg/libavformat/mpegtsenc.c FFmpeg2/libavformat/mpegtsenc.c
          break;
 +    case AV_CODEC_ID_SCTE_35:
 +    		stream_type = STREAM_TYPE_SCTE_DATA_SCTE_35;
-+         st->codecpar->codec_type = AVMEDIA_TYPE_DATA;
++              st->codecpar->codec_type = AVMEDIA_TYPE_DATA;
 +        	st->codecpar->codec_id   = AV_CODEC_ID_SCTE_35;
 +    		break;
      default:
