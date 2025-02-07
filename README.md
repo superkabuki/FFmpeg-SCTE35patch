@@ -20,28 +20,20 @@
 * Use `-muxpreload 0` and  `-muxdelay 0` to avoid the 1.4 second start bump
 ---
 
-## Example Usage:
 
-```js
- ffmpeg -copyts -i  ~/mpegts2/mpegts/nmx.ts -map 0 -c:v libx265 -c:a aac -c:d copy -muxpreload 0 -muxdelay 0 -y  passed.ts
-``` 
-
-## Applies to:
-```sh
-ffmpeg version N-118437-g4d9cdf82ee Copyright (c) 2000-2025 the FFmpeg developers
-```
----
 
 ## Install 
 
-1. Clone [ffmpeg repo version N-118437-g4d9cdf82ee](https://github.com/superkabuki/FFmpeg)
-
-2. Apply patch
+1. Clone [this repo](https://github.com/superkabuki/FFmpeg)
+2. cd FFmpeg-superkabuki-patched
+3. Configure ffmpeg  ( _do this with whichever options you like_ )
+  * I used
 ```js
-patch --directory=FFmpeg/ -strip=1 < ff-scte35.patch
-```
-3. Build ffmpeg  ( _do this with whichever options you like_ )
+./configure --enable-shared --enable-libx264 --enable-libx265 --enable-nonfree --enable-gpl --extra-version=-superkabuki-patch
 
+```
+4. make all
+5.  sudo make install
 ---
 
 # Examples
