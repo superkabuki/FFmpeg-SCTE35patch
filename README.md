@@ -36,13 +36,13 @@ ffmpeg version N-118437-g4d9cdf82ee Copyright (c) 2000-2025 the FFmpeg developer
 ```
 
 ## Install 
-1. Clone ffmpeg repo version N-118437-g4d9cdf82ee
+1. Clone [ffmpeg repo version N-118437-g4d9cdf82ee](https://github.com/superkabuki/FFmpeg)
 2. Apply patch
 ```js
 patch --directory=FFmpeg/ -strip=1 < ff-scte35.patch
 ```
-3. Run configure ( _do this with whichever options you like_ )
-4. make all install
+3. Build ffmpeg  ( _do this with whichever options you like_ )
+
 
 ## Use
 
@@ -53,5 +53,8 @@ patch --directory=FFmpeg/ -strip=1 < ff-scte35.patch
 ![image](https://github.com/user-attachments/assets/3c0190b0-479e-40ce-9c2e-9168919489a8)
 
 * new file
-![image](https://github.com/user-attachments/assets/8d7f317c-5e98-4e19-94eb-ad1bcf0461e1)
+![image](https://github.com/user-attachments/assets/2b76b386-814f-431b-a07a-a6eaa7001a12)
+
+* The patch also adds the SCTE-35 Descriptor __(CUEI / 0x49455543)__ , just to be fancy.
+* The ffmpeg mpegts code is super clean, makes it so easy.
 
