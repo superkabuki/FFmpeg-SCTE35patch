@@ -4,14 +4,13 @@
 <br> This is a patch for FFmpeg to let SCTE-35 mpegts Streams copy over as SCTE-35 Streams.
 
 ---
-![image](https://github.com/user-attachments/assets/46417dac-9bbd-479e-a0d9-4657c5a3a226)
 
 
 # FFmpeg with the SuperKabuki SCTE-35 patch applied.
 
 
- To make sure we are all on the same page, [This repo](https://github.com/superkabuki/FFmpeg_SCTE35) has the ffmpeg source with the patch applied. I just sync'ed it up about an hour ago. (_Monday, February 10 2025 5:25pm GMT_)
-
+ To make sure we are all on the same page, [This repo](https://github.com/superkabuki/FFmpeg_SCTE35) has the ffmpeg source with the patch applied.
+ 
 ## ...why?
 If you work with SCTE-35 and you use ffmpeg,<br> having the SCTE-35 stream type 0x86 changed to bin data 0x06, makes your life hard.
 
